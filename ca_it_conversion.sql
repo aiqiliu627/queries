@@ -16,7 +16,7 @@ select count(*) from linking_attempts;
 select count(distinct(linking_user_token)) 
 from success_linked a inner join "APP_PAYMENTS"."APP_PAYMENTS_ANALYTICS"."FACT_DAILY_DEPOSITS" fdd
 on a.linking_user_token = fdd.unit_token
-where fdd.settled_at > current_date-35 and is_successful = 1 and currency_code = 'CAD';
+where fdd.settled_at > current_date-30 and is_successful = 1 and currency_code = 'CAD';
 
 // Overall conversion: 551/1675 = 33%
 // This is quite different from 54% in here: https://docs.google.com/document/d/18KPmU8uWNmRrOhyLMSaIgZ-PBmPR09j8-YxWQfcVRis/edit#bookmark=id.ep4kq6yumlhn
